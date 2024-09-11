@@ -1,8 +1,8 @@
-class myClass implements Runnable
+class MyClass implements Runnable 
 {
     int no;
     String nm;
-    myClass(int a,String b)
+    MyClass(int a,String b)
     {
         no=a;
         nm=b;
@@ -13,27 +13,28 @@ class myClass implements Runnable
         for(int i=1;i<=no;i++)
         {
             System.out.println(nm+" "+i);
-            try{
+            try
+            {
                 Thread.sleep(100);
             }
-            catch(Exception e)
-            {}
+            catch(Exception e1){}
         }
     }
 }
 public class Thread4
 {
-    public static void main(String[]args)
+    public static void main(String [] args)
     {
-        Thread a=new Thread(new myClass(10,"A"));
-        Thread b=new Thread(new myClass(6,"B"));
+        Thread a=new Thread(new MyClass(10,"A"));
+        Thread b=new Thread(new MyClass(6,"B"));
         a.start();
         b.start();
-        try{
+        try
+        {
             a.join();
             b.join();
         }
         catch(Exception e){}
-        System.out.println("Main thread finished");
+        System.out.println("Main Ends");
     }
 }
