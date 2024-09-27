@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.event.*;
 class JFrm7 extends JFrame
 {
     JList list;
@@ -10,7 +11,7 @@ class JFrm7 extends JFrame
     JFrm7()
     {
         super("Frame");
-        l1=new JLabel("Choose Cit");
+        l1=new JLabel("Choose City:");
         list=new JList(city);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.addListSelectionListener(new ListSelectionListener()
